@@ -103,7 +103,12 @@ int main() {
 	srand(time(0));
 
 	
+	rectangle r;
+	rectangle rectangles[5] = { r,r,r,r,r };
 
+
+	triangle t;
+	triangle triangles[5] = { t,t,t,t,t };
 
 
 
