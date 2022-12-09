@@ -19,7 +19,26 @@ public:
 
 };
 
+class figure : public point {
+	vector<point> points;
+public:
+	figure() {
+		point p;
+		points.push_back(p);
+	}
+	figure(int number) {
+		point p(0, 0);
+		for (int i = 0; i < number; i++)
+			points.push_back(p);
+	}
 
+	void print() const override {
+		for (int i = 0; i < points.size(); i++) {
+			cout << i << " -----\n";
+			points[i].print();
+		}
+	}
+};
 
 
 
