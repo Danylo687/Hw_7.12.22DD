@@ -69,9 +69,33 @@ public:
 	}
 };
 
+class triangle : public figure {
+	vector<point> points;
+public:
+	triangle() {
+		point p;
+		for (int i = 0; i < 3; i++)
+			points.push_back(p);
+	}
+	triangle(int x1, int y1, int x2, int y2, int x3, int y3) {
+		point p1(x1, y1);
+		points.push_back(p1);
+		point p2(x2, y2);
+		points.push_back(p2);
+		point p3(x3, y3);
+		points.push_back(p3);
+
+	}
 
 
-
+	void print() const override {
+		cout << "Triangle: \n";
+		for (int i = 0; i < 3; i++) {
+			cout << i << " -----\n";
+			points[i].print();
+		}
+	}
+};
 
 
 
